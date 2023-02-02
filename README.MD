@@ -8,7 +8,7 @@ of elementary school by giving her 8 equations to solve every day.
 
 ## Example
 
-![an example of a rendered LaTeX document](sample.png)
+![an example of a rendered LaTeX document](example.png)
 
 A sample output of the program, after linking the 'poczatek.tex'
 and 'koniec.tex' and compiling it with pdfLaTeX. The .tex and .pdf files
@@ -17,7 +17,7 @@ for the example are in the repository.
 ## Features
 
 The equations contain simple fractions as well as decimals. In order to test
-the order of operations ([PEMDAS[(https://en.wikipedia.org/wiki/Order_of_operations#Mnemonics))
+the order of operations ([PEMDAS](https://en.wikipedia.org/wiki/Order_of_operations#Mnemonics))
 the program can generate paratheses around arbitrary number of fractions present
 in the equation. The math actions present in the equations consists only of
 addition, substraction, division and multiplication.
