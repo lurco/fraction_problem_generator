@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt,wide]{article} % może być 10,11,12pt; wide; floatsmall; titleauthor; {mwart} --- polska wersja klasy artykułu
+
+\usepackage[T1]{fontenc}        % poprawki do nieangielskich znaków
+\usepackage[utf8]{inputenc}     % kodowanie pliku .tex jest w UTF8
+
+%\usepackage[polish]{babel}     % pakiet do wielojęzycznych tekstów
+\usepackage[MeX,plmath]{polski} % pakiet polskiej typografii i znaków
+
+\makeatletter                                                           % Komenda wstawiająca kropki
+ \renewcommand\@seccntformat[1]{\csname the#1\endcsname.\quad}          % po numerach sekcji, podsekcji etc.,
+ \renewcommand\numberline[1]{#1.\hskip0.7em}                            % zgodnie z polskimi obyczajami
+\makeatother                                                            % typograficznymi
+
+%\usepackage{indentfirst}        % paczka do polskich akapitów
+
+
+\usepackage[pdftex,                                                     % paczka
+        colorlinks=true,                                                % do tworzenia
+        urlcolor=rltblue,       % \href{...}{...} external (URL)        % hiperłączy
+        filecolor=rltgreen,     % \href{...} local filecolor            % w obrębie
+        linkcolor=rltred,       % \ref{...} and \pageref{...}           % pliku pdf
+                                                                        %
+        pdftitle={Fractions},
+        pdfauthor={Andrzej Legutko},
+        pdfsubject={},
+        pdfproducer={pdfLaTeX},                                         %
+        pagebackref,                                                    %
+        pdfpagemode=None,                                               %
+        bookmarksopen=true]{hyperref}                                   %
+
+\usepackage{color}                      % paczka do szerokopojętego
+\definecolor{rltred}{rgb}{0.75,0,0}     % zarządzania kolorami
+\definecolor{rltgreen}{rgb}{0,0.5,0}    % w pliku
+\definecolor{rltblue}{rgb}{0,0,0.75}    %
+
+\usepackage{thumbpdf}   % paczka dodająca miniatury do pdfa
+\usepackage{geometry}   % paczka odpowiadająca za układ strony
+\geometry{verbose,a4paper,tmargin=1.5cm,bmargin=1.5cm,lmargin=1.5cm,rmargin=1.5cm}
+\usepackage[pdftex]{graphicx} % rozszerza możliwości paczki graphics (zarządzenie grafiką w różnych silnikach)
+
+% pakiety matematyczne z American Mathematical Society
+\usepackage{amsmath}    % usprawnienia do równań
+\usepackage{amsthm}     % usprawnienia do twierdzeń
+\usepackage{amssymb}    % dodatkowe symbole matematyczne (zawiera amsfonts)
+
+\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=period]{caption}       % paczka umożliwia edytowanie stylu podpisów od obrazkami
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{multicol}
+%\usepackage{hhline}
+\title{Fractions}
+\date{\today}
+
+\pagestyle{plain}
+\newfloat{Tabela}{}{lop}
+\newfloat{Wykres}{}{lop}
+\newenvironment{Figure}                                 % Nowe środowisko
+  {\par\medskip\noindent\minipage{\linewidth}}          % do wstawiania rysunków
+  {\endminipage\par\medskip}                            % do kolumn
+
+
+
+
+\begin{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+
+\begin{enumerate}
+\large
+\item $\frac{2}{2} - \frac{5}{5} \cdot \frac{3}{7} \div 8.8$ =
+\vspace{2ex}
+\item $\frac{1}{6} \div 6.7 \cdot \frac{4}{4} + \frac{6}{3}$ =
+\vspace{2ex}
+\item $\frac{8}{7} - 5.8 \cdot (7.9 \cdot 4.8)$ =
+\vspace{2ex}
+\item $7.8 - 7.4 - \frac{5}{8} - 8.9$ =
+\vspace{2ex}
+\item $4.4 \div 9.2 - \frac{4}{2} + \frac{5}{4}$ =
+\vspace{2ex}
+\item $\frac{9}{3} - \frac{4}{1} \div \frac{1}{6} - \frac{4}{1}$ =
+\vspace{2ex}
+\item $(\frac{1}{6} - \frac{3}{3}) + 9.1 \cdot \frac{1}{1}$ =
+\vspace{2ex}
+\item $\frac{5}{6} \div \frac{5}{8} + 6.3 \div \frac{2}{6}$ =
+\vspace{2ex}
+\item $\frac{8}{3} \div 8.6 \cdot 4.5 \div \frac{9}{3}$ =
+\vspace{2ex}
+\item $0.3 \cdot \frac{2}{8} \cdot \frac{4}{4} \div \frac{5}{2}$ =
+\vspace{2ex}
+\item $4.7 - \frac{3}{1} \div 2.2 + \frac{2}{2}$ =
+\vspace{2ex}
+\item $(\frac{1}{9} \div 4.9) \div \frac{4}{7} \div \frac{1}{7}$ =
+\vspace{2ex}
+\item $\frac{2}{8} - \frac{9}{2} - 5.5 + 1.2$ =
+\vspace{2ex}
+\item $\frac{8}{1} \div 7.4 + \frac{5}{1} - 1.4$ =
+\vspace{2ex}
+\item $\frac{2}{6} \div 2.6 \div \frac{5}{2} + \frac{6}{7}$ =
+\vspace{2ex}
+\end{enumerate}
+
+\end{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

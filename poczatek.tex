@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt,wide]{article} % może być 10,11,12pt; wide; floatsmall; titleauthor; {mwart} --- polska wersja klasy artykułu
+
+\usepackage[T1]{fontenc}        % poprawki do nieangielskich znaków
+\usepackage[utf8]{inputenc}     % kodowanie pliku .tex jest w UTF8
+
+%\usepackage[polish]{babel}     % pakiet do wielojęzycznych tekstów
+\usepackage[MeX,plmath]{polski} % pakiet polskiej typografii i znaków
+
+\makeatletter                                                           % Komenda wstawiająca kropki
+ \renewcommand\@seccntformat[1]{\csname the#1\endcsname.\quad}          % po numerach sekcji, podsekcji etc.,
+ \renewcommand\numberline[1]{#1.\hskip0.7em}                            % zgodnie z polskimi obyczajami
+\makeatother                                                            % typograficznymi
+
+%\usepackage{indentfirst}        % paczka do polskich akapitów
+
+
+\usepackage[pdftex,                                                     % paczka
+        colorlinks=true,                                                % do tworzenia
+        urlcolor=rltblue,       % \href{...}{...} external (URL)        % hiperłączy
+        filecolor=rltgreen,     % \href{...} local filecolor            % w obrębie
+        linkcolor=rltred,       % \ref{...} and \pageref{...}           % pliku pdf
+                                                                        %
+        pdftitle={Fractions},
+        pdfauthor={Andrzej Legutko},
+        pdfsubject={},
+        pdfproducer={pdfLaTeX},                                         %
+        pagebackref,                                                    %
+        pdfpagemode=None,                                               %
+        bookmarksopen=true]{hyperref}                                   %
+
+\usepackage{color}                      % paczka do szerokopojętego
+\definecolor{rltred}{rgb}{0.75,0,0}     % zarządzania kolorami
+\definecolor{rltgreen}{rgb}{0,0.5,0}    % w pliku
+\definecolor{rltblue}{rgb}{0,0,0.75}    %
+
+\usepackage{thumbpdf}   % paczka dodająca miniatury do pdfa
+\usepackage{geometry}   % paczka odpowiadająca za układ strony
+\geometry{verbose,a4paper,tmargin=1.5cm,bmargin=1.5cm,lmargin=1.5cm,rmargin=1.5cm}
+\usepackage[pdftex]{graphicx} % rozszerza możliwości paczki graphics (zarządzenie grafiką w różnych silnikach)
+
+% pakiety matematyczne z American Mathematical Society
+\usepackage{amsmath}    % usprawnienia do równań
+\usepackage{amsthm}     % usprawnienia do twierdzeń
+\usepackage{amssymb}    % dodatkowe symbole matematyczne (zawiera amsfonts)
+
+\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=period]{caption}       % paczka umożliwia edytowanie stylu podpisów od obrazkami
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{multicol}
+%\usepackage{hhline}
+\title{Fractions}
+\date{\today}
+
+\pagestyle{plain}
+\newfloat{Tabela}{}{lop}
+\newfloat{Wykres}{}{lop}
+\newenvironment{Figure}                                 % Nowe środowisko
+  {\par\medskip\noindent\minipage{\linewidth}}          % do wstawiania rysunków
+  {\endminipage\par\medskip}                            % do kolumn
+
+
+
+
+\begin{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+
+\begin{enumerate}
+\large
